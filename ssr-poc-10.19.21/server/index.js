@@ -5,14 +5,12 @@ const port = 3000;
 const cors = require('cors')
 
 app.use(cors())
-
-let people = ['geddy', 'neil', 'alex'];
-let html = ejs.render('<%= people.join(", "); %>', {people: people});
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.send(html)
-  })
+    res.render('partial', {hobbies: ['skiing', 'hiking', 'swimming']})
+})
 
-  app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
-  })
+})
