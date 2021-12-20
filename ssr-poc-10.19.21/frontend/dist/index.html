@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: row;
+            }
 
+            .child{
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                text-align: center;
+                border: 1px solid black;
+                min-width: 50%;
+            }
+        </style>
     </head>
     <body>
 
         <h1 style="width: 100%; background-color: green;" class="header">Brand.com</h1>
         <h3>Brand.com test</h3>
-        <div class="discover-sandbox-inline"></div>
+        <div class="content"></div>
+        <div class="container">
+            <div class="child">
+                <img src="https://i.natgeofe.com/k/fbdb91c9-787d-4f5b-8eec-26ac171722b7/5-reasons-sloth_4x3.jpg" width="400px">
+            </div>
+            <div class="discover-sandbox-inline child"></div>
+        </div>
+
         <button class="mikmak-discover">Click Me</button>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script>!function(e,t,i,r,a,d){e[r]=e[r]||!1;var n=t.querySelectorAll(a);if(n)for(var c=0;c<n.length;c++){n[c].addEventListener("click",function(){e[r]=!0})}var m=t.createElement("script");m.setAttribute("data-mikmak-brand",i),m.type="text/javascript",m.src=d,m.defer=!0,t.body.appendChild(m)}(window,document,"f97185e1-aab7-6328-abc9-ef678846fe85","mikmak_discover",".mikmak-discover","//localhost:5005/v2-int-bundle");</script>
+        <script>!function(e,t,i,r,a,d){e[r]=e[r]||!1;var n=t.querySelectorAll(a);if(n)for(var c=0;c<n.length;c++){n[c].addEventListener("click",function(){e[r]=!0})}var m=t.createElement("script");m.setAttribute("data-mikmak-brand",i),m.type="text/javascript",m.src=d,m.defer=!0,t.body.appendChild(m)}(window,document,"f97185e1-aab7-6328-abc9-ef678846fe85","mikmak_discover",".mikmak-discover","//localhost:5005/v2");</script>
         <!-- <script src="http://localhost:5005/v0-beta"></script> -->
     </body>
 </html>
